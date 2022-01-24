@@ -10,7 +10,7 @@
 
 ## Wireframes
 
-![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643061790/Project%204/Screen_Shot_2022-01-24_at_5.02.37_PM_pjjrvb.png)
+![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643061990/Project%204/Screen_Shot_2022-01-24_at_5.06.17_PM_lmxkkb.png)
 
 ![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643060923/Project%204/Screen_Shot_2022-01-24_at_4.48.31_PM_yeevkw.png)
 
@@ -22,7 +22,9 @@ Wireframes URL: https://www.figma.com/file/h62ivP8PWsBibRcYC8cSQb/blackArchives?
 
 ## Component Hierarchy
 
-![wireframe]()
+![wireframe](https://res.cloudinary.com/kacloud20/image/upload/v1643064832/Project%204/blackarchive_chart_2x_skokre.png)
+
+Component Hierarchy URL: https://whimsical.com/blackarchive-chart-XDyaWqJ3CMF3mggkEebhBb
 
 ## Application Dependencies
 
