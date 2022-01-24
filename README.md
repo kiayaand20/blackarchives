@@ -12,7 +12,7 @@
 
 ![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643061990/Project%204/Screen_Shot_2022-01-24_at_5.06.17_PM_lmxkkb.png)
 
-![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643060923/Project%204/Screen_Shot_2022-01-24_at_4.48.31_PM_yeevkw.png)
+![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643065507/Project%204/Screen_Shot_2022-01-24_at_6.04.46_PM_kjd6s6.png)
 
 Wireframes URL: https://www.figma.com/file/h62ivP8PWsBibRcYC8cSQb/blackArchives?node-id=0%3A1
 
