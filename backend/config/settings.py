@@ -32,7 +32,7 @@ SECRET_KEY = '#bl)*8w)x27!vc1975sge+(l@gyu++2a-ighz87s@&q3bqh-oo'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://black-archives.herokuapp.com/']
+ALLOWED_HOSTS = ['black-archives.herokuapp.com']
 
 # Application definition
 
