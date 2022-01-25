@@ -9,6 +9,9 @@ class Director(models.Model):
     biography = models.CharField(max_length=512, blank=True, null=True)
     image = models.CharField(max_length=256)
 
+    def __str__(self):
+        return self.name
+
 
 class Film(models.Model):
     title = models.CharField(max_length=256)
@@ -17,3 +20,6 @@ class Film(models.Model):
     image = models.CharField(max_length=256)
     director = models.ForeignKey(
         Director, on_delete=models.CASCADE, related_name='films')
+
+    def __str__(self):
+        return self.title
