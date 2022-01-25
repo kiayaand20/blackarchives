@@ -10,7 +10,7 @@
 
 ## Wireframes
 
-![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643076252/Project%204/Screen_Shot_2022-01-24_at_9.02.25_PM_wicwyi.png)
+![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643076673/Project%204/Screen_Shot_2022-01-24_at_9.10.59_PM_qurfnu.png)
 
 ![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643065826/Project%204/Screen_Shot_2022-01-24_at_6.08.46_PM_xfri9c.png)
 
