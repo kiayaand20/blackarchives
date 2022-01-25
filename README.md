@@ -6,11 +6,11 @@
 
 ## Project Description
 
-<em>blackArchives</em> is an online database devoted to the work of Black Film Directors. The application will feature information on each director and details about their films. Users will be able to create an account, which allows access to add, update and delete directors and films from the list.
+<em>blackArchives</em> is an online database devoted to celebrating the work of Black Film Directors. The application will feature information on each director and details about their films. Users will be able to create an account, which allows access to add, update and delete directors and films from the list.
 
 ## Wireframes
 
-![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643061990/Project%204/Screen_Shot_2022-01-24_at_5.06.17_PM_lmxkkb.png)
+![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643076252/Project%204/Screen_Shot_2022-01-24_at_9.02.25_PM_wicwyi.png)
 
 ![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643065826/Project%204/Screen_Shot_2022-01-24_at_6.08.46_PM_xfri9c.png)
 
