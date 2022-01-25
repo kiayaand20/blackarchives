@@ -9,6 +9,7 @@ django = "*"
 djangorestframework = "*"
 psycopg2-binary = "*"
 djangorestframework-simplejwt = "*"
+whitenoise = "*"
 
 [dev-packages]
 
