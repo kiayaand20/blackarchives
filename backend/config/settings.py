@@ -23,9 +23,9 @@ IS_PRODUCTION = os.getenv('PRODUCTION') == 'True'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 if IS_PRODUCTION:
-    BASE_DIR = Path(__file__).resolve().parent.parent
-else:
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -34,7 +34,7 @@ else:
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-SECRET_KEY = '#bl)*8w)x27!vc1975sge+(l@gyu++2a-ighz87s@&q3bqh-oo'
+
 
 DEBUG = True
 
