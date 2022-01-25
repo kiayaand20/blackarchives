@@ -22,4 +22,4 @@ class Film(models.Model):
         Director, on_delete=models.CASCADE, related_name='films')
 
     def __str__(self):
-        return self.title
+        return self.director
