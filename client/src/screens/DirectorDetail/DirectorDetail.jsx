@@ -25,12 +25,12 @@ function DirectorDetail(props) {
 
   return (
     <Layout user={props.user}>
-      <div>
+      <div className='director-detail'>
         <img src={director.image} alt={director.name}/>
         <div className='detail'> 
           <p>{director.name}</p>
           <p>{director.roles}</p>
-          <p>{director.description}</p>
+          <p>{director.biography}</p>
             <Link to={`/directors/${director.id}/edit`}>
               <button className='edit-button'>
                 Edit
@@ -38,8 +38,7 @@ function DirectorDetail(props) {
             </Link>
             <Link className='delete-button' to={'/directors'}>
               <button className='delete-button'
-                onClick={() => deleteDirector(director.id)}
-              >
+                onClick={() => deleteDirector(director.id)}>
                 Delete
               </button>
             </Link>
