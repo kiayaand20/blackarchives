@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 
 const DirectorCards = () => {
   const [directors, setDirectors] = useState([])
+  const [isLoaded, setLoaded] = useState(false)
 
   useEffect(() => {
     const fetchDirectors = async () => {
@@ -12,6 +13,10 @@ const DirectorCards = () => {
     }
     fetchDirectors()
   }, [])
+
+  if (!isLoaded) {
+    return <h1>Loading...</h1>
+  }
 
   return (
     <div>
