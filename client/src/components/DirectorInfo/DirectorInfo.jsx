@@ -22,8 +22,7 @@ const DirectorCards = () => {
   return (
     <div>
       <div>
-        {directors && 
-        directors.map(director => (
+        {directors.map(director => (
           <Link to={`/directors/${director.id}`}>
             <div className="director-card">
               <h2>{director.name}</h2>
