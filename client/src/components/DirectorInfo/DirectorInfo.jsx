@@ -10,6 +10,7 @@ const DirectorCards = () => {
     const fetchDirectors = async () => {
       const allDirectors = await getDirectors()
       setDirectors(allDirectors)
+      setLoaded(true)
     }
     fetchDirectors()
   }, [])

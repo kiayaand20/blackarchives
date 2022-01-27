@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Sacramento&display=swap");
 
-/* .home {
+.home {
   display: grid;
-} */
+}
 
 .title {
   font-family: "Sacramento", cursive;
