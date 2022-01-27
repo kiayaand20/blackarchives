@@ -7,9 +7,9 @@ import axios from 'axios'
 // }
 
 const api = axios.create({
-    baseURL: process.env.NODE_ENV === 
-         'https://black-archives.herokuapp.com/'
-        // : 'http://localhost:8000/'
+    baseURL: process.env.NODE_ENV === 'PRODUCTION'
+        ? 'https://black-archives.herokuapp.com/'
+        : 'http://localhost:8000/'
 })
 
 // api.interceptors.request.use(async function (config) {

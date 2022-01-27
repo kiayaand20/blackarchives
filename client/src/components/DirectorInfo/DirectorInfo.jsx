@@ -22,10 +22,13 @@ const DirectorCards = () => {
   return (
     <div>
       <div>
+      <h1 className='all-director-title'>All Directors</h1>
+        <p>Did we forget someone? 
+        <Link to="/directors/" style={{textDecoration: "underline"}}> Click Here</Link> to add them.</p>
         {directors.map(director => (
           <Link to={`/directors/${director.id}`}>
-            <div className="director-card">
-              <h2>{director.name}</h2>
+            <div>
+              <h2 className="director-card">{director.name}</h2>
               <img src={director.image} alt={director.name} />
             </div>
           </Link>
