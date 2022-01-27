@@ -8,7 +8,6 @@ const DirectorCards = () => {
   useEffect(() => {
     const fetchDirectors = async () => {
       const allDirectors = await getDirectors()
-      console.log(allDirectors)
       setDirectors(allDirectors)
     }
     fetchDirectors()
