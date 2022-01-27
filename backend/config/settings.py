@@ -194,6 +194,7 @@ CORS_ALLOWED_ORIGINS = [
   'http://localhost:8000',
   'http://localhost:8001',
   'https://blackarchives.netlify.app',
+  'https://black-archives.herokuapp.com',
 ]
 
 CORS_ALLOW_METHODS = [
