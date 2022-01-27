@@ -18,7 +18,7 @@ const DirectorCards = () => {
     <div>
       <div>
         {directors.map(director => (
-           <Link to={`/directors/${director.id}`}>
+          <Link to={`/directors/${director.id}`}>
             <div className="director-card">
               <h2>{director.name}</h2>
               <img src={director.image} alt={director.name} />
