@@ -164,8 +164,8 @@ REST_FRAMEWORK = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=5),
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': True,
 
@@ -190,15 +190,28 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-'http://localhost:3000',
-'http://localhost:8000',
+  'http://localhost:3000',
+  'http://localhost:8000',
+  'http://localhost:8001',
 ]
 
 CORS_ALLOW_METHODS = [
-'DELETE',
-'GET',
-'OPTIONS',
-'PATCH',
-'POST',
-'PUT',
+  'DELETE',
+  'GET',
+  'OPTIONS',
+  'PATCH',
+  'POST',
+  'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+  'accept',
+  'accept-encoding',
+  'authorization',
+  'content-type',
+  'dnt',
+  'origin',
+  'user-agent',
+  'x-csrftoken',
+  'x-requested-with',
 ]

@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Sacramento&display=swap");
+
+/* .home {
+  display: grid;
+} */
+
+.title {
+  font-family: "Sacramento", cursive;
+  font-size: 48px;
+  padding-top: 60px;
+  letter-spacing: 2px;
+}
+
+.home-sentence {
+  font-family: "Gilda Display", serif;
+  font-size: 24px;
+  border-bottom: 2px solid #ffa818;
+  width: 50%;
+  margin: 0px auto;
+  margin-bottom: 30px;
+}
+
+.spike-lee-home {
+  padding-right: 20px;
+}
+
+.ava-duv-home {
+  padding-left: 20px;
+}
+
+.article-title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  font-family: "Gilda Display", serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #ffa818;
+  width: 15%;
+  margin: 0px auto;
+}
+
+.view-all {
+  display: flex;
+  justify-content: center;
+}
+
+.view-all-btn {
+  font-family: "Gilda Display", serif;
+  background-color: #ffa818;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

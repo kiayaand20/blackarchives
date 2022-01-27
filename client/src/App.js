@@ -4,6 +4,9 @@ import { Routes, Route } from 'react-router-dom'
 import { verifyUser } from './services/users'
 import Home from './screens/Home/Home'
 import Directors from './screens/Directors/Directors'
+import SignIn from './screens/SignIn/SignIn'
+import SignUp from './screens/SignUp/SignUp'
+import DirectorDetail from './screens/DirectorDetail/DirectorDetail'
 
   function App() {
     const [user, setUser] = useState(null)
@@ -17,10 +20,13 @@ import Directors from './screens/Directors/Directors'
     }, [])
 
   return (
-    <div className="body">
+    <div className='body'>
       <Routes>
         <Route path='/' element={<Home user={user} />} />
-        <Route path='/directors' element={<Directors user={user}/>} />
+        <Route path='/directors' element={<Directors user={user} />} />
+        <Route path='/user/login/' element={<SignIn setUser={setUser} />} />
+        <Route path='/user/signup/' element={<SignUp setUser={setUser} />} />
+        <Route path='/directors/:id' element={<DirectorDetail user={user}/>} />
       </Routes>
     </div>
   );

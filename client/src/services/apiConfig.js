@@ -12,12 +12,13 @@ const api = axios.create({
         : 'http://localhost:8000/'
 })
 
-api.interceptors.request.use(async function (config) {
-    config.headers['Authorization'] = await getToken()
-    return config
-}, function (error) {
-    console.log('Request error: ', error)
-    return Promise.reject(error)
-});
+// api.interceptors.request.use(async function (config) {
+//     config.headers['Authorization'] = await getToken()
+//     return config
+// }, function (error) {
+//     console.log('Request error: ', error)
+//     return Promise.reject(error)
+// });
+
 
 export default api

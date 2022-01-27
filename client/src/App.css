@@ -1,0 +1,7 @@
+body {
+  display: grid;
+  min-height: 400px;
+  margin-bottom: 120px;
+  clear: both;
+  text-align: center;
+}

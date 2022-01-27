@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import DirectorCard from '../DirectorCard/DirectorCard'
 import { getDirectors } from '../../services/directors'
+import {Link} from 'react-router-dom'
 
 const DirectorCards = () => {
   const [directors, setDirectors] = useState([])
@@ -13,22 +13,18 @@ const DirectorCards = () => {
     fetchDirectors()
   }, [])
 
-  const CARDS = directors.map((director, index) =>
-    index < 120 ? (
-      <DirectorCard
-        id={director.id}
-        image={director.image}
-        name={director.name}
-        roles={director.roles}
-        biography={director.biography}
-        key={index}
-      />
-    ) : null
-  )
-
   return (
     <div>
-      <div>{CARDS}</div>
+      <div>
+        {directors.map(director => (
+           <Link to={`/directors/${director.id}`}>
+            <div className="director-card">
+              <h2>{director.name}</h2>
+              <img src={director.image} alt={director.name} />
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }
