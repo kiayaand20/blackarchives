@@ -43,7 +43,7 @@ function DirectorDetail(props) {
                 Delete
               </button>
           </Link>
-        <img src={director.films[0].image} alt={director.films[0].image} />
+        {/* <img src={director.films[0].image} alt={director.films[0].image} /> */}
         </div>
       </div>
     </Layout>
