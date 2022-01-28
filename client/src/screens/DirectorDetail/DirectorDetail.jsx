@@ -10,6 +10,7 @@ function DirectorDetail(props) {
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
 
+
   useEffect(() => {
     const fetchDirector = async () => {
       const director = await getDirector(id)
@@ -23,6 +24,7 @@ function DirectorDetail(props) {
   if (!isLoaded) {
     return <h1>Loading...</h1>
   }
+
 
   return (
     <Layout user={props.user}>
@@ -43,7 +45,15 @@ function DirectorDetail(props) {
                 Delete
               </button>
           </Link>
-        {/* <img src={director.films[0].image} alt={director.films[0].image} /> */}
+          <div>
+            {director.films.map((films) => (
+              <div>
+                <img src={films.image} alt={films.title} />
+                <p>{films.title}, {films.year}</p>
+                <p>{films.decription}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </Layout>
