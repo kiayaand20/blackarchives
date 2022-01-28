@@ -49,7 +49,7 @@ function DirectorDetail(props) {
             {director.films.map((films) => (
               <div>
                 <img src={films.image} alt={films.title} />
-                <p>{films.title}, {films.year}</p>
+                <p>{films.title}, {films.release}</p>
                 <p>{films.decription}</p>
               </div>
             ))}
