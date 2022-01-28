@@ -9,8 +9,16 @@ class FilmSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class DirectorSerializer(serializers.HyperlinkedModelSerializer):
-    films = serializers.StringRelatedField(many=True)
+    films = serializers.FilmSerializer(many=True)
 
     class Meta:
         model = Director
         fields = ['id', 'name', 'roles', 'biography', 'image', 'films']
+        
+    
+    def create(self, validated_data):
+        films_data = validated_data.pop('films')
+        director = Director.objects.create(**validated_data)
+        for film_data in films_data:
+            Film.objects.create(director=director, **film_data)
+        return director

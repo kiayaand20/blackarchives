@@ -9,3 +9,16 @@
   font-family: "Gilda Display", serif;
   margin-top: 80px;
 }
+
+.edit-button {
+  font-family: "Gilda Display", serif;
+  background-color: #ffa818;
+  font-size: 16px;
+  margin: 20px 20px;
+}
+
+.delete-button {
+  font-family: "Gilda Display", serif;
+  background-color: #ffa818;
+  font-size: 16px;
+}

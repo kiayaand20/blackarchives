@@ -4,6 +4,7 @@ import Layout from '../../components/Layout/Layout'
 import { Link, useParams } from 'react-router-dom'
 import { getDirector, deleteDirector } from '../../services/directors'
 
+
 function DirectorDetail(props) {
   const [director, setDirector] = useState(null)
   const [isLoaded, setLoaded] = useState(false)
@@ -42,9 +43,9 @@ function DirectorDetail(props) {
                 Delete
               </button>
           </Link>
-          <p>{director.films}</p>
-          </div>
+        <img src={director.films[0].image} alt={director.films[0].image} />
         </div>
+      </div>
     </Layout>
   )
 }
