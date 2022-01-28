@@ -7,7 +7,7 @@ class FilmSerializer(serializers.HyperlinkedModelSerializer):
   
     class Meta:
         model = Film
-        fields = ['id', 'title', 'release', 'description', 'image', 'director']
+        fields = ['id', 'title', 'description', 'image', 'director']
 
 class DirectorSerializer(serializers.HyperlinkedModelSerializer):
     films = FilmSerializer(many=True)
