@@ -7,6 +7,7 @@ import Directors from './screens/Directors/Directors'
 import SignIn from './screens/SignIn/SignIn'
 import SignUp from './screens/SignUp/SignUp'
 import DirectorDetail from './screens/DirectorDetail/DirectorDetail'
+import DirectorEdit from './screens/DirectorEdit/DirectorEdit'
 
   function App() {
     const [user, setUser] = useState(null)
@@ -26,7 +27,8 @@ import DirectorDetail from './screens/DirectorDetail/DirectorDetail'
         <Route path='/directors' element={<Directors user={user} />} />
         <Route path='/user/login/' element={<SignIn setUser={setUser} />} />
         <Route path='/user/signup/' element={<SignUp setUser={setUser} />} />
-        <Route path='/directors/:id' element={<DirectorDetail user={user}/>} />
+        <Route path='/directors/:id' element={<DirectorDetail user={user} />} />
+        <Route path='/directors/:id/edit' element={<DirectorEdit user={user}/>} />
       </Routes>
     </div>
   );

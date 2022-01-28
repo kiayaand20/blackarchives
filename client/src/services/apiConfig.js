@@ -7,9 +7,8 @@ import axios from 'axios'
 // }
 
 const api = axios.create({
-    baseURL: 
-         'https://black-archives.herokuapp.com'
-        // : 'http://localhost:8000/'
+    baseURL: 'https://black-archives.herokuapp.com'
+
 })
 
 // api.interceptors.request.use(async function (config) {

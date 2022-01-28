@@ -41,7 +41,8 @@ function DirectorDetail(props) {
                 onClick={() => deleteDirector(director.id)}>
                 Delete
               </button>
-            </Link>
+          </Link>
+          <p>{director.films}</p>
           </div>
         </div>
     </Layout>
