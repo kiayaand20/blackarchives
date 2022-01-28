@@ -29,7 +29,7 @@ function DirectorDetail(props) {
   return (
     <Layout user={props.user}>
       <div className='director-detail'>
-        <img src={director.image} alt={director.name}/>
+        <img src={director.image} alt={director.name} />
         <div className='detail'> 
           <p>{director.name}</p>
           <p>{director.roles}</p>
@@ -45,12 +45,23 @@ function DirectorDetail(props) {
                 Delete
               </button>
           </Link>
-          <div>
+
+          <div className='film-section'>
+            <p className='film-section-title'>Films:</p>
+          </div>
+            
+          <div className='film-card'>
             {director.films.map((films) => (
-              <div>
-                <img src={films.image} alt={films.title} />
-                <p>{films.title}, {films.release}</p>
-                <p>{films.decription}</p>
+              <div className='card'>
+                <div className='image'>
+                  <img src={films.image} alt={films.title}/>
+                </div>
+                <div className='details'>
+                  <div className='center'>
+                    <h2><b>{films.title}, {films.release}</b></h2>
+                    <p>{films.description}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
