@@ -3,8 +3,6 @@ from blackarchives.models import Director, Film
 
 
 class FilmSerializer(serializers.HyperlinkedModelSerializer):
-    director = serializers.StringRelatedField(many=True)
-    
     class Meta:
         model = Film
         fields = ['id', 'title', 'year', 'description', 'image', 'director']
