@@ -15,7 +15,7 @@ class Director(models.Model):
 
 class Film(models.Model):
     title = models.CharField(max_length=256)
-    # release = models.IntegerField()
+    release = models.IntegerField()
     description = models.CharField(max_length=512, blank=True, null=True)
     image = models.CharField(max_length=256)
     director = models.ForeignKey(
