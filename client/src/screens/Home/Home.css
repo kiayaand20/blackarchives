@@ -2,11 +2,10 @@
 
 .title {
   font-family: "Sacramento", cursive;
-  font-size: 64px;
-  padding-top: 30px;
+  font-size: 84px;
   padding-bottom: 0px;
   margin-bottom: 0px;
-  letter-spacing: 2px;
+  letter-spacing: 3.5px;
 }
 
 .home-sentence {
@@ -14,10 +13,11 @@
   font-size: 18px;
   font-weight: bold;
   border-bottom: 5px solid #ffa818;
-  width: 45%;
+  width: 70%;
   margin: 0px auto;
   margin-bottom: 30px;
   padding-bottom: 20px;
+  letter-spacing: 1.6;
 }
 
 .home-sentence2 {
@@ -36,17 +36,18 @@
 }
 
 .article-title {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding-top: 15px;
+  text-align: center;
   font-family: "Gilda Display", serif;
-  font-size: 30px;
+  padding-top: 20px;
   letter-spacing: 2px;
   border-bottom: 2px solid #ffa818;
   width: 15%;
   margin: 0px auto;
+}
+
+.films {
+  padding-top: 30px;
+  padding-bottom: 80px;
 }
 
 .view-all {
@@ -57,6 +58,6 @@
 .view-all-btn {
   font-family: "Gilda Display", serif;
   background-color: #ffa818;
-  margin-top: 60px;
+  margin-top: 20px;
   margin-bottom: 40px;
 }

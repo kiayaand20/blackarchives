@@ -63,6 +63,7 @@ a {
     flex-wrap: wrap;
     justify-content: flex-end;
     font-family: "Hanuman", serif;
+    margin-top: 1px;
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
@@ -70,6 +71,7 @@ a {
     align-content: flex-end;
     font-size: 18px;
     width: 55%;
+    color: white;
   }
 
   .curtainBtn {

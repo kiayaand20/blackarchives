@@ -55,7 +55,7 @@ function DirectorDetail(props) {
         </div>
         </div>
         <hr />
-      <div className='film-section'>
+        <div className='film-section'>
             <p className='film-section-title'>Films:</p>  
           </div>
           <div className='film-section-add'>
@@ -81,7 +81,6 @@ function DirectorDetail(props) {
               </div>
             ))}
           </div> 
-
         </div>
     </Layout>
   )
