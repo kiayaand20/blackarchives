@@ -2,7 +2,7 @@
 
 .title {
   font-family: "Sacramento", cursive;
-  font-size: 84px;
+  font-size: 88px;
   padding-bottom: 0px;
   margin-bottom: 0px;
   letter-spacing: 3.5px;
@@ -10,20 +10,19 @@
 
 .home-sentence {
   font-family: "Gilda Display", serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   border-bottom: 5px solid #ffa818;
   width: 70%;
   margin: 0px auto;
   margin-bottom: 30px;
   padding-bottom: 20px;
-  letter-spacing: 1.6;
 }
 
 .home-sentence2 {
   font-family: "Gilda Display", serif;
-  font-size: 22px;
-  padding: 0px 220px 20px 220px;
+  font-size: 26px;
+  padding: 0px 220px 2px 220px;
 }
 
 .spike-lee-home {
@@ -33,6 +32,12 @@
 
 .ava-duv-home {
   padding-left: 20px;
+  padding-right: 20px;
+}
+
+.peebles-home {
+  padding-left: 20px;
+  padding-bottom: 75px;
 }
 
 .article-title {
@@ -46,8 +51,10 @@
 }
 
 .films {
-  padding-top: 30px;
-  padding-bottom: 80px;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .view-all {
@@ -60,4 +67,10 @@
   background-color: #ffa818;
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.article-1,
+.article-2 {
+  padding-left: 20px;
+  padding-right: 20px;
 }

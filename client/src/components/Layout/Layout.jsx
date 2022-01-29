@@ -1,11 +1,11 @@
-// import './Layout.css'
+import './Layout.css'
 import Nav from '../Nav/Nav'
 import Footer from '../Footer/Footer'
 
 const Layout = (props) => (
     <div className='layout'>
         <Nav user={props.user} />
-        <div className="layout-children">
+        <div className='layout-children'>
             {props.children}
         </div>
         <Footer />

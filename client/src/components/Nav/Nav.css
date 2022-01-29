@@ -17,11 +17,12 @@
 .logo {
   display: flex;
   justify-content: flex-start;
+  font-family: "Sacramento", cursive;
   align-items: center;
   color: white;
   font-weight: bold;
   font-size: 34px;
-  letter-spacing: 1px;
+  letter-spacing: 6px;
   flex: 1;
   max-width: 30vw;
   padding-right: 650px;
