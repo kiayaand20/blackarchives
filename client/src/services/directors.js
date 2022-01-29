@@ -20,7 +20,7 @@ export const getDirector = async (id) => {
 
 export const createDirector = async director => {
   try {
-      const response = await api.post('/directors/', director)
+      const response = await api.post('/directors/')
       return response.data
   } catch (error) {
       throw error
