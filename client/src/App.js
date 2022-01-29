@@ -25,11 +25,11 @@ function App() {
   return (
     <div className='body'>
       <Routes>
-        <Route path='/' element={<Home user={user} />} />
+        <Route path='/' element={<Home  />} />
         <Route path='/user/login/' element={<SignIn setUser={setUser} />} />
         <Route path='/sign-out' element={<SignOut setUser={setUser}/>} />
-        <Route path='/directors/' element={<Directors user={user} />} />
-        <Route path='/directors/:id' element={<DirectorDetail user={user} />} />
+        <Route path='/directors/' element={<Directors  />} />
+        <Route path='/directors/:id' element={<DirectorDetail  />} />
         <Route path='/directors/:id/edit' element={<DirectorEdit user={user} />} />
         <Route path='/directors/create' element={<DirectorCreate user={user} />} />
       </Routes>

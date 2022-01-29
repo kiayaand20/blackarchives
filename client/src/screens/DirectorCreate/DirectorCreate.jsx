@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react'
+import { useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { createDirector } from '../../services/directors'
 import Layout from '../../components/Layout/Layout'
@@ -35,7 +35,7 @@ function DirectorCreate(props) {
   const { name, roles, biography, image } = directorcreate;
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className='director-edit'>
         <h1 className='director-edit-title'>Add Director</h1>
       </div>

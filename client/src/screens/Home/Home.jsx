@@ -2,9 +2,9 @@ import './Home.css'
 import Layout from '../../components/Layout/Layout'
 import {Link} from 'react-router-dom'
 
-function Home(props) {
+function Home() {
   return (
-    <Layout user={props.user}>
+    <Layout>
       <div>
         <p className='title'>blackArchives</p>
         <p className='home-sentence'>Celebrating Black Film Directors and their bodies of work</p>
@@ -25,7 +25,7 @@ function Home(props) {
       </div>
 
       <div>
-        <h1 className='article-title'>Articles</h1>
+        <h1 className='article-title'>Featured Articles</h1>
         
         <div className='films'>
           <div className='article-1'>

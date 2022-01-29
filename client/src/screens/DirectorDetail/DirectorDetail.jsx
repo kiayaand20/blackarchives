@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom'
 import { getDirector, deleteDirector } from '../../services/directors'
 
 
-function DirectorDetail(props) {
+function DirectorDetail() {
   const [director, setDirector] = useState(null)
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
@@ -27,7 +27,7 @@ function DirectorDetail(props) {
 
 
   return (
-    <Layout user={props.user}>
+    <Layout>
       <div>
       <div className='director-detail'>
         <img src={director.image}

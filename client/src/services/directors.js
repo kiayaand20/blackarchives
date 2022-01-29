@@ -29,7 +29,7 @@ export const createDirector = async (director) => {
 
 export const updateDirector = async (id, director) => {
   try {
-      const response = await api.put(`/directors/${id}`, director)
+      const response = await api.put(`/directors/${id}/`, director)
       return response.data
   } catch (error) {
       throw error
@@ -38,7 +38,7 @@ export const updateDirector = async (id, director) => {
 
 export const deleteDirector = async id => {
   try {
-      const response = await api.delete(`/directors/${id}`)
+      const response = await api.delete(`/directors/${id}/`)
       return response.data
   } catch (error) {
       throw error
