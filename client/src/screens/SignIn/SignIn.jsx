@@ -4,68 +4,54 @@ import { signIn } from '../../services/users'
 import { useNavigate } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout'
 
-function SignIn(props) {
+function SignIn({setUser}) {
   const navigate = useNavigate()
 
   const [form, setForm] = useState({
-    email: '',
+    username: '',
     password: '',
-    isError: false,
-    errorMsg: '',
   })
 
   const handleChange = (event) => {
+    const { name, value } = event.target;
+    
     setForm({
       ...form,
-      [event.target.name]: event.target.value,
+      [name]: value,
     })
   }
 
-  const onSignIn = async (event) => {
+  const handleSignIn = async (event) => {
     event.preventDefault()
-    const { setUser } = props
     try {
-      const user = await signIn(form)
-      setUser(user)
-      navigate('/')
+      const user = await signIn(form);
+      if (user) {
+        setUser(user);
+        navigate("/");
+      }
     } catch (error) {
-      console.error(error)
+      console.error(error);
       setForm({
-        isError: true,
-        errorMsg: 'Invalid Credentials',
-        email: '',
-        password: '',
-      })
+        username: "",
+        password: "",
+      });
     }
-  }
+  };
 
-  const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : ''
-    if (form.isError) {
-      return (
-        <button type='submit' className={toggleForm}>
-          {form.errorMsg}
-        </button>
-      )
-    } else {
-      return <button type='submit'>Sign In</button>
-    }
-  }
-
-  const { email, password } = form
+  const { username, password } = form
 
   return (
     <Layout>
     <div className='form-container'>
       <h3>Sign In</h3>
-      <form onSubmit={onSignIn}>
-        <label>Email</label>
+      <form onSubmit={handleSignIn}>
+        <label>Username</label>
         <input
           required
           type='text'
-          name='email'
-          value={email}
-          placeholder='Enter Email'
+          name='username'
+          value={username}
+          placeholder='Enter Username'
           onChange={handleChange}
         />
         <label>Password</label>
@@ -76,8 +62,8 @@ function SignIn(props) {
           type='password'
           placeholder='Password'
           onChange={handleChange}
-        />
-        {renderError()}
+          />
+        <button type='submit'>Submit</button>
       </form>
     </div>
   </Layout>

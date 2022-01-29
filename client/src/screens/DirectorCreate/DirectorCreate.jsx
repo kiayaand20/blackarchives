@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { createDirector } from '../../services/directors'
 import Layout from '../../components/Layout/Layout'
 import './DirectorCreate.css'
 
 
-function DirectorCreate(props) {
+function DirectorCreate({ setToggle }) {
 
   let navigate = useNavigate()
 
@@ -18,28 +18,38 @@ function DirectorCreate(props) {
 
   const handleChange = (event) => {
     const { name, value } = event.target
-    setDirectorCreate({
-      ...directorcreate,
+    setDirectorCreate((prev) => ({
+      ...prev,
       [name]: value,
-    })
-  }
+    }));
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await createDirector(directorcreate)
+    const created = await createDirector(directorcreate);
+    if (created) {
+      setToggle((prev) => !prev);
+    }
+    setDirectorCreate({
+      name: '',
+      roles: '',
+      biography: '',
+      image: '',
+    })
     navigate('/directors/')
   }
 
-  useEffect(() => {
-    const fetchDirector = async () => {
-      const directorcreate = await createDirector()
-      setDirectorCreate(directorcreate)
-    }
-    fetchDirector()
-  }, [])
+  // useEffect(() => {
+  //   const fetchDirector = async () => {
+  //     const directorcreate = await createDirector()
+  //     setDirectorCreate(directorcreate)
+  //   }
+  //   fetchDirector()
+  // }, [])
+  const { name, roles, biography, image } = directorcreate;
 
   return (
-    <Layout user={props.user}>
+    <Layout>
       <div className='director-edit'>
         <h1 className='director-edit-title'>Add Director</h1>
       </div>
@@ -49,7 +59,7 @@ function DirectorCreate(props) {
             <label className='label'>Name:</label>
             <input
               className='input'
-              value={directorcreate.name}
+              value={name}
               name='name'
               required
               autoFocus
@@ -60,7 +70,7 @@ function DirectorCreate(props) {
             <label className='label'>Roles:</label>
             <input
               className='input'
-              value={directorcreate.roles}
+              value={roles}
               name='roles'
               required
               onChange={handleChange}
@@ -72,7 +82,7 @@ function DirectorCreate(props) {
             <input
               className='input'
               rows={10}
-              value={directorcreate.biography}
+              value={biography}
               name='biography'
               required
               onChange={handleChange}
@@ -82,7 +92,7 @@ function DirectorCreate(props) {
             <label className='label'>Image:</label>
             <input
               className='input'
-              value={directorcreate.image}
+              value={image}
               name='image'
               required
               onChange={handleChange}
