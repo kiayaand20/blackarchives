@@ -1,11 +1,11 @@
-import { useState} from 'react'
+import { useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { createDirector } from '../../services/directors'
 import Layout from '../../components/Layout/Layout'
 import './DirectorCreate.css'
 
 
-function DirectorCreate({ setToggle }) {
+function DirectorCreate(props) {
 
   let navigate = useNavigate()
 
@@ -14,38 +14,24 @@ function DirectorCreate({ setToggle }) {
     roles: '',
     biography: '',
     image: '',
+    films: [],
   })
 
   const handleChange = (event) => {
     const { name, value } = event.target
-    setDirectorCreate((prev) => ({
-      ...prev,
+    setDirectorCreate({
+      ...directorcreate,
       [name]: value,
-    }));
+    });
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    const created = await createDirector(directorcreate);
-    if (created) {
-      setToggle((prev) => !prev);
-    }
-    setDirectorCreate({
-      name: '',
-      roles: '',
-      biography: '',
-      image: '',
-    })
+    await createDirector(directorcreate)
     navigate('/directors/')
   }
 
-  // useEffect(() => {
-  //   const fetchDirector = async () => {
-  //     const directorcreate = await createDirector()
-  //     setDirectorCreate(directorcreate)
-  //   }
-  //   fetchDirector()
-  // }, [])
+
   const { name, roles, biography, image } = directorcreate;
 
   return (

@@ -5,12 +5,13 @@ import { verifyUser} from './services/users'
 import Home from './screens/Home/Home'
 import Directors from './screens/Directors/Directors'
 import SignIn from './screens/SignIn/SignIn'
+import SignOut from './screens/SignOut/SignOut'
 import DirectorDetail from './screens/DirectorDetail/DirectorDetail'
 import DirectorEdit from './screens/DirectorEdit/DirectorEdit'
 import DirectorCreate from './screens/DirectorCreate/DirectorCreate'
 
 function App() {
-    const [user, setUser] = useState(false)
+  const [user, setUser] = useState(false)
 
     useEffect(() => {
       const fetchUser = async () => {
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home user={user} />} />
         <Route path='/user/login/' element={<SignIn setUser={setUser} />} />
+        <Route path='/sign-out' element={<SignOut setUser={setUser}/>} />
         <Route path='/directors/' element={<Directors user={user} />} />
         <Route path='/directors/:id' element={<DirectorDetail user={user} />} />
         <Route path='/directors/:id/edit' element={<DirectorEdit user={user} />} />
