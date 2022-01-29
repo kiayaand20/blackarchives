@@ -6,27 +6,64 @@
 }
 
 .director-detail {
+  display: flex;
+  padding: 80px 60px;
+  padding-top: 80px;
   font-family: "Gilda Display", serif;
   margin-top: 80px;
+}
+
+.detail {
+  display: inline-block;
+  text-align: left;
+}
+
+.director-img {
+  width: 450px;
+  height: 350px;
+  padding: 0 40px;
+}
+
+.director-name {
+  font-size: 48px;
+  margin: 48px 0px 20px 0px;
+}
+
+.director-roles {
+  font-size: 24px;
+}
+
+.director-bio {
+  font-size: 20px;
+}
+
+.director-detail-btns {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 40px;
 }
 
 .edit-button {
   font-family: "Gilda Display", serif;
   background-color: #ffa818;
   font-size: 16px;
-  margin: 20px 20px;
+  width: 80px;
+  height: 40px;
 }
 
 .delete-button {
   font-family: "Gilda Display", serif;
   background-color: #ffa818;
   font-size: 16px;
+  width: 80px;
+  height: 40px;
 }
 
 .film-section {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 .film-section-title {
@@ -39,11 +76,22 @@
   width: 10%;
 }
 
+.film-section-add {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.film-section-add-sentence {
+  font-family: "Gilda Display", serif;
+  font-size: 16px;
+}
+
 .film-card {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-left: 260px;
+  margin: 0px 0px 0px 260px;
 }
 
 .card {

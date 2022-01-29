@@ -9,7 +9,6 @@ const authenticated = (
 )
 const unauthenticated = (
     <>
-        <NavLink className="link" to="/user/signup/">Sign Up</NavLink>
         <NavLink className="link" to="/user/login/">Sign In</NavLink>
     </>
 )
@@ -25,15 +24,15 @@ const Nav = ({ user }) => {
     setMenuOpen(!menuOpen)
   })
 
-        return (
-            <div className="nav">
-     <div className="nav-body">
+    return (
+      <div className="nav">
+      <div className="nav-body">
         <NavLink className="logo" to="/">blackArchives</NavLink>
         <div className="links">
           {user && <div className="link-welcome">Welcome, {user.username}!</div>}
           {alwaysOptions}
-          {user ? authenticated : unauthenticated}
-        </div>
+                  {user ? authenticated : unauthenticated}  
+      </div>
 
         <div className="curtain">
           {user && <div className="link-welcome">Welcome, {user.username}!</div>}

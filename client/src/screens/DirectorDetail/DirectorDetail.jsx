@@ -28,26 +28,42 @@ function DirectorDetail(props) {
 
   return (
     <Layout user={props.user}>
+      <div>
       <div className='director-detail'>
-        <img src={director.image} alt={director.name} />
+        <img src={director.image}
+          alt={director.name}
+          className='director-img'
+        />
         <div className='detail'> 
-          <p>{director.name}</p>
-          <p>{director.roles}</p>
-          <p>{director.biography}</p>
-            <Link to={`/directors/${director.id}/edit`}>
-              <button className='edit-button'>
-                Edit
-              </button>
-            </Link>
-            <Link className='delete-button' to={'/directors'}>
-              <button className='delete-button'
-                onClick={() => deleteDirector(director.id)}>
-                Delete
-              </button>
-          </Link>
+          <p className='director-name'><b>{director.name}</b></p>
+          <p className='director-roles'><em>{director.roles}</em></p>
+          <p className='director-bio'>{director.biography}</p>
 
-          <div className='film-section'>
-            <p className='film-section-title'>Films:</p>
+        <div className='director-detail-btns'>
+          <Link to={`/directors/${director.id}/edit`}>
+            <button className='edit-button'>
+              Edit
+            </button>
+          </Link>
+          <Link className='delete-button' to={'/directors'}>
+            <button className='delete-button'
+              onClick={() => deleteDirector(director.id)}>
+              Delete
+            </button>
+          </Link>
+        </div>
+        </div>
+        </div>
+        <hr />
+      <div className='film-section'>
+            <p className='film-section-title'>Films:</p>  
+          </div>
+          <div className='film-section-add'>
+            <p className='film-section-add-sentence'>
+              Want to add a film? 
+              <Link to="/films/create"
+                style={{ textDecoration: "underline" }}> Click Here!</Link>
+            </p>
           </div>
             
           <div className='film-card'>
@@ -64,9 +80,9 @@ function DirectorDetail(props) {
                 </div>
               </div>
             ))}
-          </div>
+          </div> 
+
         </div>
-      </div>
     </Layout>
   )
 }

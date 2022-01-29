@@ -42,6 +42,9 @@ function DirectorEdit(props) {
 
   return (
     <Layout user={props.user}>
+      <div className='director-edit'>
+        <h1 className='director-edit-title'>Edit Director</h1>
+      </div>
       <div className='edit-form'>
         <form onSubmit={handleSubmit}>
           <div className='input-section'>
