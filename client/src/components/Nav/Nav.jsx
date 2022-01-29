@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 const authenticated = (
     <>
-        <NavLink className="link" to="/">Sign Out</NavLink>
+        <NavLink className="link" to="/sign-out">Sign Out</NavLink>
     </>
 )
 const unauthenticated = (
