@@ -1,6 +1,7 @@
-import { useState} from 'react'
+import { useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { createFilms } from '../../services/films'
+import { getDirectors } from '../../services/directors'
 import Layout from '../../components/Layout/Layout'
 import './FilmCreate.css'
 
@@ -8,7 +9,7 @@ import './FilmCreate.css'
 function FilmCreate(props) {
 
   let navigate = useNavigate()
-
+  const [directors, setDirectors] = useState([])
   const [filmcreate, setFilmCreate] = useState({
     title: '',
     release: '',
@@ -16,6 +17,14 @@ function FilmCreate(props) {
     image: '',
     director: '',
   })
+
+  useEffect(() => {
+    const fetchDirectors = async () => {
+      const allDirectors = await getDirectors()
+      setDirectors(allDirectors)
+    }
+    fetchDirectors()
+  }, [])
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -35,8 +44,8 @@ function FilmCreate(props) {
 
   return (
     <Layout user={props.user}>
-      <div className='director-edit'>
-        <h1 className='director-edit-title'>Add Film</h1>
+      <div className='film-edit'>
+        <h1 className='film-edit-title'>Add Film</h1>
       </div>
       <div className='edit-form'>
         <form onSubmit={handleSubmit}>
@@ -61,7 +70,6 @@ function FilmCreate(props) {
               onChange={handleChange}
             />
           </div>
-
           <div className='input-section'>
             <label className='label'>Description:</label>
             <input
@@ -69,16 +77,6 @@ function FilmCreate(props) {
               rows={10}
               value={description}
               name='description'
-              required
-              onChange={handleChange}
-            />
-          </div>
-          <div className='input-section'>
-            <label className='label'>Director:</label>
-            <input
-              className='input'
-              value={director}
-              name='director'
               required
               onChange={handleChange}
             />
@@ -92,6 +90,29 @@ function FilmCreate(props) {
               required
               onChange={handleChange}
             />
+          </div>
+          <div className='input-section'>
+            <label className='label'>
+            <select
+              value={directors.name}
+              name='director'
+              required
+              onChange={handleChange}
+              options={directors.name}
+            >
+              <option
+                value='0'
+                selected>Director Name</option>
+                  {directors.map((name) => {
+                    return <option key={name.id}
+                      value={name.id} name='director'
+                      required
+                      onChange={handleChange}
+                    >{name.name}
+              </option>
+            })}
+            </select>
+            </label>
           </div>
           <button className='submit' type='submit'>Submit</button>
         </form>

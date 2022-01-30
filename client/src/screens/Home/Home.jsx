@@ -27,7 +27,7 @@ function Home(props) {
       <div>
         <h1 className='article-title'>Featured Articles</h1>
         
-        <div className='films'>
+        <div className='article-section'>
           <div className='article-1'>
           <img src='https://res.cloudinary.com/kacloud20/image/upload/c_scale,h_260,w_400/v1643433159/black-history-movies_mridqi.jpg'
             alt='black-history-films' height='300' width='450' /> 

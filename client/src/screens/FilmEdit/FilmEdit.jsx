@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getFilm, updateFilms } from '../../services/films'
+import { getDirectors } from '../../services/directors'
 import Layout from '../../components/Layout/Layout'
 import './FilmEdit.css'
 
@@ -8,7 +9,7 @@ import './FilmEdit.css'
 function FilmEdit(props) {
 
   let navigate = useNavigate()
-
+  const [directors, setDirectors] = useState([])
   const [filmedit, setFilmEdit] = useState({
     title: '',
     release: '',
@@ -18,6 +19,14 @@ function FilmEdit(props) {
   })
 
   let { id } = useParams()
+
+  useEffect(() => {
+    const fetchDirectors = async () => {
+      const allDirectors = await getDirectors()
+      setDirectors(allDirectors)
+    }
+    fetchDirectors()
+  }, [])
 
   useEffect(() => {
     const fetchFilm = async () => {
@@ -43,8 +52,8 @@ function FilmEdit(props) {
 
   return (
     <Layout user={props.user}>
-      <div className='director-edit'>
-        <h1 className='director-edit-title'>Edit Film</h1>
+      <div className='film-edit'>
+        <h1 className='film-edit-title'>Edit Film</h1>
       </div>
       <div className='edit-form'>
         <form onSubmit={handleSubmit}>
@@ -90,15 +99,29 @@ function FilmEdit(props) {
               onChange={handleChange}
             />
           </div>
+
           <div className='input-section'>
-            <label className='label'>Director:</label>
-            <input
-              className='input'
-              value={filmedit.director}
+            <label className='label'>
+            <select
+              value={directors.name}
               name='director'
               required
               onChange={handleChange}
-            />
+              options={directors.name}
+            >
+              <option
+                value='0'
+                selected>Director Name</option>
+                  {directors.map((name) => {
+                    return <option key={name.id}
+                      value={name.id} name='director'
+                      required
+                      onChange={handleChange}
+                    >{name.name}
+              </option>
+            })}
+            </select>
+            </label>
           </div>
           <button className='submit' type='submit'>Submit</button>
         </form>

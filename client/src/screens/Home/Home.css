@@ -50,7 +50,7 @@
   margin: 0px auto;
 }
 
-.films {
+.article-section {
   display: flex;
   justify-content: center;
   padding-top: 40px;
@@ -73,4 +73,30 @@
 .article-2 {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 48px;
+    margin-top: 80px;
+    letter-spacing: 1px;
+  }
+  .home-sentence {
+    font-size: 14px;
+  }
+  .spike-lee-home {
+    margin-left: 13px;
+    padding-bottom: 20px;
+  }
+
+  .ava-duv-home {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .peebles-home {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 0px;
+  }
 }
