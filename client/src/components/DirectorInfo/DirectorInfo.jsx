@@ -3,7 +3,7 @@ import { getDirectors } from '../../services/directors'
 import { Link } from 'react-router-dom'
 import './DirectorInfo.css'
 
-const DirectorCards = () => {
+const DirectorInfo = () => {
   const [directors, setDirectors] = useState([])
   const [isLoaded, setLoaded] = useState(false)
 
@@ -40,4 +40,4 @@ const DirectorCards = () => {
   )
 }
 
-export default DirectorCards
+export default DirectorInfo

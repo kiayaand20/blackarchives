@@ -2,9 +2,9 @@ import './Home.css'
 import Layout from '../../components/Layout/Layout'
 import {Link} from 'react-router-dom'
 
-function Home() {
+function Home(props) {
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div>
         <p className='title'>blackArchives</p>
         <p className='home-sentence'>Celebrating Black Film Directors and their bodies of work</p>

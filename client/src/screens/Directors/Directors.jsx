@@ -3,10 +3,10 @@ import Layout from '../../components/Layout/Layout'
 import DirectorInfo from '../../components/DirectorInfo/DirectorInfo'
 import './Directors.css'
 
-export default function Directors() {
+export default function Directors(props) {
   return (
     <div>
-      <Layout>
+      <Layout user={props.user}>
         <div className='all-directors'>
           <DirectorInfo />
         </div>
