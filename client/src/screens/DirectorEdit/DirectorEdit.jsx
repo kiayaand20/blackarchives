@@ -37,7 +37,7 @@ function DirectorEdit(props) {
   const handleSubmit = async (event) => {
     event.preventDefault()
     await updateDirector(id, directoredit)
-    navigate(`/directors/${id}`)
+    navigate(`/directors/${id}/`)
   }
 
   return (

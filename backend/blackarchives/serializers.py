@@ -20,8 +20,8 @@ class DirectorSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         films_data = validated_data.pop('films')
         director = Director.objects.create(**validated_data)
-        for films_data in films_data:
-            Film.objects.create(director=director, **films_data)
+        for film_data in films_data:
+            Film.objects.create(director=director, **film_data)
         return director
       
     def update(self, instance, validated_data):

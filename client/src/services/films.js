@@ -11,7 +11,7 @@ export const getFilms = async () => {
 
 export const getFilm = async id => {
   try {
-      const response = await api.get(`/films/${id}`)
+      const response = await api.get(`/films/${id}/`)
       return response.data
   } catch (error) {
       throw error
@@ -29,7 +29,7 @@ export const createFilms = async film => {
 
 export const updateFilms = async (id, film) => {
   try {
-      const response = await api.put(`/film/${id}`, film)
+      const response = await api.put(`/films/${id}/`, film)
       return response.data
   } catch (error) {
       throw error
@@ -38,7 +38,7 @@ export const updateFilms = async (id, film) => {
 
 export const deleteFilms = async id => {
   try {
-      const response = await api.delete(`/films/${id}`)
+      const response = await api.delete(`/films/${id}/`)
       return response.data
   } catch (error) {
       throw error
