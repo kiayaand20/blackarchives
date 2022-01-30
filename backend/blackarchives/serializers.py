@@ -3,7 +3,7 @@ from blackarchives.models import Director, Film
 
 
 class FilmSerializer(serializers.ModelSerializer):
-    director = serializers.StringRelatedField()
+    # director = serializers.StringRelatedField()
   
     class Meta:
         model = Film
