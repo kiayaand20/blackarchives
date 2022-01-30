@@ -38,7 +38,7 @@ function FilmEdit(props) {
   const handleSubmit = async (event) => {
     event.preventDefault()
     await updateFilms(id, filmedit)
-    navigate(`/directors/${id}`)
+    navigate(`/directors/`)
   }
 
   return (
