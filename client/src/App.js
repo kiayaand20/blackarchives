@@ -10,6 +10,7 @@ import DirectorDetail from './screens/DirectorDetail/DirectorDetail'
 import DirectorEdit from './screens/DirectorEdit/DirectorEdit'
 import DirectorCreate from './screens/DirectorCreate/DirectorCreate'
 import FilmCreate from './screens/FilmCreate/FilmCreate'
+import FilmEdit from './screens/FilmEdit/FilmEdit'
 
 function App() {
   const [user, setUser] = useState(false)
@@ -34,6 +35,7 @@ function App() {
         <Route path='/directors/:id/edit' element={<DirectorEdit user={user} />} />
         <Route path='/directors/create' element={<DirectorCreate user={user} />} />
         <Route path='/films/create' element={<FilmCreate user={user} />} />
+        <Route path='/films/:id/edit' element={<FilmEdit user={user} />} />
       </Routes>
     </div>
   );

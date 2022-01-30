@@ -1,15 +1,15 @@
-import { useState} from 'react'
-import { useNavigate } from 'react-router-dom'
-import { createFilms } from '../../services/films'
+import { useState, useEffect } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+import { getFilm, updateFilms } from '../../services/films'
 import Layout from '../../components/Layout/Layout'
-import './FilmCreate.css'
+import './FilmEdit.css'
 
 
-function FilmCreate(props) {
+function FilmEdit(props) {
 
   let navigate = useNavigate()
 
-  const [filmcreate, setFilmCreate] = useState({
+  const [filmedit, setFilmEdit] = useState({
     title: '',
     release: '',
     description: '',
@@ -17,26 +17,34 @@ function FilmCreate(props) {
     director: '',
   })
 
+  let { id } = useParams()
+
+  useEffect(() => {
+    const fetchFilm = async () => {
+      const filmedit = await getFilm(id)
+      setFilmEdit(filmedit)
+    }
+    fetchFilm()
+  }, [id])
+
   const handleChange = (event) => {
     const { name, value } = event.target
-    setFilmCreate({
-      ...filmcreate,
+    setFilmEdit({
+      ...filmedit,
       [name]: value,
-    });
-  };
+    })
+  }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await createFilms(filmcreate)
-    navigate(`/directors/`)
+    await updateFilms(id, filmedit)
+    navigate(`/films/${id}`)
   }
-
-  const { title, release, description, image, director } = filmcreate;
 
   return (
     <Layout user={props.user}>
       <div className='director-edit'>
-        <h1 className='director-edit-title'>Add Film</h1>
+        <h1 className='director-edit-title'>Edit Film</h1>
       </div>
       <div className='edit-form'>
         <form onSubmit={handleSubmit}>
@@ -44,7 +52,7 @@ function FilmCreate(props) {
             <label className='label'>Title:</label>
             <input
               className='input'
-              value={title}
+              value={filmedit.title}
               name='title'
               required
               autoFocus
@@ -55,30 +63,19 @@ function FilmCreate(props) {
             <label className='label'>Release:</label>
             <input
               className='input'
-              value={release}
+              value={filmedit.release}
               name='release'
               required
               onChange={handleChange}
             />
           </div>
-
           <div className='input-section'>
             <label className='label'>Description:</label>
             <input
               className='input'
               rows={10}
-              value={description}
+              value={filmedit.description}
               name='description'
-              required
-              onChange={handleChange}
-            />
-          </div>
-          <div className='input-section'>
-            <label className='label'>Director:</label>
-            <input
-              className='input'
-              value={director}
-              name='director'
               required
               onChange={handleChange}
             />
@@ -87,8 +84,18 @@ function FilmCreate(props) {
             <label className='label'>Image:</label>
             <input
               className='input'
-              value={image}
+              value={filmedit.image}
               name='image'
+              required
+              onChange={handleChange}
+            />
+          </div>
+          <div className='input-section'>
+            <label className='label'>Director:</label>
+            <input
+              className='input'
+              value={filmedit.director}
+              name='director'
               required
               onChange={handleChange}
             />
@@ -102,4 +109,4 @@ function FilmCreate(props) {
 
 }
 
-export default FilmCreate
+export default FilmEdit

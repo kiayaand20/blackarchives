@@ -9,7 +9,7 @@ export const getFilms = async () => {
   }
 }
 
-export const getFilm = async (id) => {
+export const getFilm = async id => {
   try {
       const response = await api.get(`/films/${id}`)
       return response.data

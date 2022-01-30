@@ -9,9 +9,9 @@ export const getDirectors = async () => {
   }
 }
 
-export const getDirector = async (id) => {
+export const getDirector = async id => {
   try {
-      const response = await api.get(`/directors/${id}`)
+      const response = await api.get(`/directors/${id}/`)
       return response.data
   } catch (error) {
       throw error

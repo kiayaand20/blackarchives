@@ -3,6 +3,7 @@ import './DirectorDetail.css'
 import Layout from '../../components/Layout/Layout'
 import { Link, useParams } from 'react-router-dom'
 import { getDirector, deleteDirector } from '../../services/directors'
+import { deleteFilms } from '../../services/films'
 
 
 function DirectorDetail(props) {
@@ -76,17 +77,18 @@ function DirectorDetail(props) {
                   <div className='center'>
                     <h2><b>{films.title}, {films.release}</b></h2>
                     <p>{films.description}</p>
-                    <Link to={`/films/${director.id}/edit`}>
-            <button className='edit-button'>
-              Edit
-            </button>
-          </Link>
-          <Link className='delete-button' to={'/directors'}>
-            <button className='delete-button'
-              onClick={() => deleteDirector(director.id)}>
-              Delete
-            </button>
-          </Link>
+                    <Link to={`/films/${films.id}/edit`}>
+                      <button className='edit-button'>
+                      Edit
+                      </button>
+                    </Link>
+                    
+                    <Link className='delete-button' to={'/directors'}>
+                      <button className='delete-button'
+                        onClick={() => deleteFilms(films.id)}>
+                      Delete
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

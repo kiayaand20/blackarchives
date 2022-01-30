@@ -34,11 +34,11 @@ class DirectorSerializer(serializers.ModelSerializer):
         instance.image = validated_data.get('image', instance.image)
         instance.save()
 
-        for films_data in films_data:
-            films = films.pop(0)
-            films.title = films_data.get('title', films.title)
-            films.release = films_data.get('release', films.release)
-            films.description = films_data.get('description', films.description)
-            films.image = films_data.get('image', films.image)
-            films.save()
+        for film_data in films_data:
+            film = films.pop(0)
+            film.title = film_data.get('title', film.title)
+            film.release = film_data.get('release', film.release)
+            film.description = film_data.get('description', film.description)
+            film.image = film_data.get('image', film.image)
+            film.save()
         return instance
