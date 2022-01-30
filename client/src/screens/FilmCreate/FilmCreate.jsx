@@ -40,7 +40,7 @@ function FilmCreate(props) {
     navigate(`/directors/`)
   }
 
-  const { title, release, description, image, director } = filmcreate;
+  const { title, release, description, image} = filmcreate;
 
   return (
     <Layout user={props.user}>
