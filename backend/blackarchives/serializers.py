@@ -36,7 +36,7 @@ class DirectorSerializer(serializers.ModelSerializer):
 
         for films_data in films_data:
             films = films.pop(0)
-            films.title = films_data.get('name', films.name)
+            films.title = films_data.get('title', films.title)
             films.release = films_data.get('release', films.release)
             films.description = films_data.get('description', films.description)
             films.image = films_data.get('image', films.image)
