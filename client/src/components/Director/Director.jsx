@@ -1,5 +1,5 @@
 // import './Director.css'
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 function Director(props) {
   return (
@@ -11,7 +11,7 @@ function Director(props) {
         <div>{props.biography}</div>
       </Link>
     </div>
-  )
+  );
 }
 
-export default Director
+export default Director;

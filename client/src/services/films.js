@@ -1,4 +1,4 @@
-import api from './apiConfig'
+import api from "./apiConfig";
 
 const getToken = () => {
   return new Promise((resolve) => {
@@ -8,23 +8,23 @@ const getToken = () => {
 
 export const getFilms = async () => {
   try {
-    const response = await api.get('/films/')
-      return response.data
+    const response = await api.get("/films/");
+    return response.data;
   } catch (error) {
-      throw error
+    throw error;
   }
-}
+};
 
-export const getFilm = async id => {
+export const getFilm = async (id) => {
   try {
-      const response = await api.get(`/films/${id}/`)
-      return response.data
+    const response = await api.get(`/films/${id}/`);
+    return response.data;
   } catch (error) {
-      throw error
+    throw error;
   }
-}
+};
 
-export const createFilms = async film => {
+export const createFilms = async (film) => {
   try {
     const token = await getToken();
 
@@ -34,12 +34,12 @@ export const createFilms = async film => {
       },
     };
 
-    const response = await api.post('/films/', film, headers)
-      return response.data
+    const response = await api.post("/films/", film, headers);
+    return response.data;
   } catch (error) {
-      throw error
+    throw error;
   }
-}
+};
 
 export const updateFilms = async (id, film) => {
   try {
@@ -51,14 +51,14 @@ export const updateFilms = async (id, film) => {
       },
     };
 
-    const response = await api.put(`/films/${id}/`, film, headers)
-      return response.data
+    const response = await api.put(`/films/${id}/`, film, headers);
+    return response.data;
   } catch (error) {
-      throw error
+    throw error;
   }
-}
+};
 
-export const deleteFilms = async id => {
+export const deleteFilms = async (id) => {
   try {
     const token = await getToken();
 
@@ -68,9 +68,9 @@ export const deleteFilms = async id => {
       },
     };
 
-    const response = await api.delete(`/films/${id}/`, headers)
-      return response.data
+    const response = await api.delete(`/films/${id}/`, headers);
+    return response.data;
   } catch (error) {
-      throw error
+    throw error;
   }
-}
+};
