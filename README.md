@@ -43,7 +43,7 @@ The following dependencies are needed to run this application:
 
 The application has the following endpoints:
 
-Client (Front-end):
+<b>Client (Front-end):</b>
 
 - Home = '/'
 - User Login = '/user/login/'
@@ -55,9 +55,9 @@ Client (Front-end):
 - Film Create = '/films/create'
 - Film Edit (by ID number) = '/films/:id/edit'
 
-Back-end:
+<b>Back-end:</b>
 
-<b>Directors -</b>
+Directors -
 
 ```
  {
@@ -77,7 +77,7 @@ Back-end:
             },
 ```
 
-<b>Films -</b>
+Films -
 
 ```
 {
