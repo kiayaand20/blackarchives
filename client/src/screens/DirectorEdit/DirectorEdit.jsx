@@ -1,8 +1,9 @@
+import './DirectorEdit.css'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getDirector, updateDirector } from '../../services/directors'
 import Layout from '../../components/Layout/Layout'
-import './DirectorEdit.css'
+
 
 
 function DirectorEdit(props) {
