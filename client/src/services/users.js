@@ -1,5 +1,4 @@
 import api from './apiConfig'
-// import jwtDecode from 'jwt-decode'
 
 // export const signUp = async (credentials) => {
 //   try {
@@ -32,15 +31,6 @@ export const signOut = async () => {
     throw error
   }
 }
-
-// export const changePassword = async (passwords, user) => {
-//   try {
-//     const resp = await api.post('/')
-//     return resp.data
-//   } catch (error) {
-//     throw error
-//   }
-// }
 
 export const verifyUser = async () => {
   const refresh = localStorage.getItem('refresh')

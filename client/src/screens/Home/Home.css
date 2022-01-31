@@ -75,14 +75,28 @@
   padding-right: 20px;
 }
 
+@media (max-width: 1060px) {
+  .peebles-home {
+    padding-bottom: 0px;
+  }
+  .ava-duv-home {
+    padding-bottom: 20px;
+  }
+  .article-title {
+    font-size: 30px;
+    width: 30%;
+  }
+}
+
 @media (max-width: 900px) {
   .title {
-    font-size: 48px;
+    font-size: 60px;
     margin-top: 80px;
     letter-spacing: 1px;
   }
   .home-sentence {
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: normal;
   }
   .spike-lee-home {
     margin-left: 13px;
@@ -98,5 +112,30 @@
     padding-bottom: 20px;
     padding-top: 20px;
     padding-left: 0px;
+  }
+  .home-sentence2 {
+    font-size: 18px;
+    padding: 0px 20px 2px 20px;
+  }
+  .article-title {
+    font-size: 22px;
+    width: 55%;
+  }
+  .article-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+  .article-1 {
+    padding-bottom: 40px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .article-image {
+    width: 350px;
+    height: 240px;
+    margin-right: 20px;
   }
 }

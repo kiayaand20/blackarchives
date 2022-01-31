@@ -30,3 +30,13 @@
   border-radius: 3px;
   margin: 0 10px 15px 10px;
 }
+
+@media (max-width: 800px) {
+  .all-director-title {
+    font-size: 24px;
+    width: 45%;
+  }
+  .director-container {
+    margin: 0 5px 15px 5px;
+  }
+}

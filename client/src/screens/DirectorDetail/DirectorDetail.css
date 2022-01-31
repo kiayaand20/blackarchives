@@ -157,3 +157,71 @@
   padding: 0;
   color: #262626;
 }
+
+@media (max-width: 800px) {
+  .director-detail {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .director-img {
+    width: 250px;
+    height: 200px;
+    padding: 0px;
+  }
+  .detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .director-name {
+    font-size: 32px;
+  }
+  .director-roles {
+    font-size: 18px;
+  }
+  .director-bio {
+    font-size: 16px;
+  }
+  .director-detail-btns {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+  .film-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .film-section-title {
+    font-size: 30px;
+    width: 25%;
+  }
+  .film-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px 0px 0px 190px;
+  }
+  .card {
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 340px;
+    background: #000;
+    margin-top: 190px;
+  }
+  .edit-button {
+    font-size: 13px;
+    width: 50px;
+    height: 25px;
+    padding-top: 0px;
+  }
+  .delete-button {
+    font-size: 13px;
+    width: 60px;
+    height: 25px;
+    padding-top: 0px;
+  }
+}

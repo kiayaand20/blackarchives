@@ -30,7 +30,7 @@ function Home(props) {
         <div className='article-section'>
           <div className='article-1'>
           <img src='https://res.cloudinary.com/kacloud20/image/upload/c_scale,h_260,w_400/v1643433159/black-history-movies_mridqi.jpg'
-            alt='black-history-films' height='300' width='450' /> 
+            alt='black-history-films' height='300' width='450' className='article-image'/> 
           <p>Hollywood So Often Gets Black History Wrong-<br /> Black Filmmakers Are Setting the Record Straight</p>
           <a href="https://time.com/5932844/black-history-movies/">
             <p>Read More</p>
@@ -39,7 +39,7 @@ function Home(props) {
           
           <div className='article-2'>
           <img src='https://res.cloudinary.com/kacloud20/image/upload/v1643468289/africanamerican_collage-h_2018_t8oxqn.webp'
-            alt='black-history-films' height='300' width="450" /> 
+            alt='black-history-films' height='300' width="450" className='article-image'/> 
           <p>15 Up-and-Coming Black Directors Directors <br /> Set to Shape the Future of Hollywood</p>
           <a href="https://time.com/5932844/black-history-movies/">
             <p>Read More</p>

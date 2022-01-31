@@ -35,8 +35,10 @@ const Nav = ({ user }) => {
       </div>
 
         <div className="curtain">
-          {user && <div className="link-welcome">Welcome, {user.username}!</div>}
-          <button className='curtainBtn' onClick={toggleMenu}>Menu</button>
+          <div className='curtainBtn'>
+            <button className='menuBtn' onClick={toggleMenu}>Menu</button>
+          </div>
+          
           <div className={`overlay ${menuOpen ? ' showMenu' : ''}`}>
             <button className='overlayBtn' onClick={toggleMenu}>X</button>
             <div className='overlay-content'>
