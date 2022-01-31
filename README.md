@@ -6,7 +6,7 @@
 
 ## Project Description
 
-<em>blackArchives</em> is an online database devoted to celebrating the work of Black Film Directors. The application will feature information on each director and details about their films. Users will be able to create an account, which allows access to add, update and delete directors and films from the list.
+<em>blackArchives</em> is an online database devoted to celebrating the work of Black Film Directors. The application will feature information on each director and details about their films. The site is authenticated, which allows users to access Director and Film information. Users will also be able to add, update and delete directors and films from the list.
 
 ## Wireframes
 
@@ -41,10 +41,24 @@ The following dependencies are needed to run this application:
 
 ## Endpoints
 
-TBD
+The application has the following endpoints:
+
+- Home = '/'
+- User Login = '/user/login/'
+- User Sign-out = '/sign-out'
+- All Directors = '/directors/'
+- Director Detail (by ID number)= '/directors/:id'
+- Director Edit (by ID number) = '/directors/:id/edit'
+- Director Create = '/directors/create'
+- Film Create = '/films/create'
+- Film Edit (by ID number) = '/films/:id/edit'
 
 ## MVP
 
 - Create a database with PostgreSQL
 - Create a RESTful JSON API in Django with user authentication deployed on Heroku
 - Create a front-end user interface written in React and hosted Netlify
+
+## Post-MVP
+
+- Build Sign-up functionality for users
