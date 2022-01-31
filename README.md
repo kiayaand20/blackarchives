@@ -43,6 +43,8 @@ The following dependencies are needed to run this application:
 
 The application has the following endpoints:
 
+Client (Front-end):
+
 - Home = '/'
 - User Login = '/user/login/'
 - User Sign-out = '/sign-out'
@@ -52,6 +54,41 @@ The application has the following endpoints:
 - Director Create = '/directors/create'
 - Film Create = '/films/create'
 - Film Edit (by ID number) = '/films/:id/edit'
+
+Back-end:
+
+Directors -
+
+```
+ {
+        "id": 1,
+        "name": "Spike Lee",
+        "roles": "Director | Producer | Writer | Actor",
+        "biography": "Shelton Jackson \"Spike\" Lee is an American film director, producer, screenwriter, actor, and professor. His production company, 40 Acres and a Mule Filmworks, has produced more than 35 films since 1983. He made his directorial debut with She's Gotta Have It.",
+        "image": "https://res.cloudinary.com/kacloud20/image/upload/v1643473193/1361425_spikelee_851459_stwdfk.jpg",
+        "films": [
+            {
+                "id": 3,
+                "title": "She's Gotta Have It",
+                "release": 1986,
+                "description": "The plot concerns a young woman (Johns) who is seeing three men, and the feelings this arrangement provokes.",
+                "image": "https://res.cloudinary.com/kacloud20/image/upload/v1643149621/Project%204/e926be11e21586c1d0ec78f36b72fa0d538ed49e_rhooso.jpg",
+                "director": 1
+            },
+```
+
+Films -
+
+```
+{
+    "id": 12,
+    "title": "Keanu",
+    "release": 2016,
+    "description": "Recently dumped by his girlfriend, slacker Rell (Jordan Peele) finds some happiness when a cute kitten winds up on his doorstep. After a heartless thief steals the cat, Rell recruits his cousin Clarence (Keegan-Michael Key) to help him retrieve it.",
+    "image": "https://res.cloudinary.com/kacloud20/image/upload/v1643514796/Project%204/MV5BMTUwODA0NzQxMl5BMl5BanBnXkFtZTgwNzUyMjY3ODE_._V1_FMjpg_UX1000__usoaci.jpg",
+    "director": 4
+}
+```
 
 ## MVP
 
