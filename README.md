@@ -28,36 +28,43 @@ Component Hierarchy URL: https://whimsical.com/blackarchive-chart-XDyaWqJ3CMF3mg
 
 ## Application Dependencies
 
-The following dependencies are needed to run this application:
+Back-end Dependencies-
 
 - django
-- psycopg2-binary
 - djangorestframework
+- psycopg2-binary
 - djangorestframework-simplejwt
 - gunicorn
 - whitenoise
 - dj-database-url
 - python-dotenv
+- django-cors-headers
 
-## Endpoints
+Front-end Dependencies-
+
+- React
+- React Router
+- Axios
+
+## Routes
 
 The application has the following endpoints:
 
-<b>Client (Front-end):</b>
+<b>Client Routes (Front-end):</b>
 
-- Home = '/'
-- User Login = '/user/login/'
-- User Sign-out = '/sign-out'
-- All Directors = '/directors/'
-- Director Detail (by ID number)= '/directors/:id'
-- Director Edit (by ID number) = '/directors/:id/edit'
-- Director Create = '/directors/create'
-- Film Create = '/films/create'
-- Film Edit (by ID number) = '/films/:id/edit'
+- '/' : Home Page
+- '/user/login/' : Login Page
+- '/sign-out' : User Sign-out
+- '/directors/' : Takes Users to 'View All' Directors page
+- '/directors/:id' : Takes Users to a Director Detail page by id number
+- '/directors/:id/edit' : Users are able to edit Directors (edit form)
+- '/directors/create' : Users are able to create Directors (create form)
+- '/films/create' : Users are able to create Films (create form)
+- '/films/:id/edit' : Users are able to edit Films (edit form)
 
-<b>Back-end Code Snippets:</b>
+<b>Back-end Route Code Snippets:</b>
 
-<em>Directors -</em>
+<em>Director (by id) -</em>
 
 ```
  {
@@ -77,7 +84,7 @@ The application has the following endpoints:
             },
 ```
 
-<em>Films -</em>
+<em>Film (by id) -</em>
 
 ```
 {
