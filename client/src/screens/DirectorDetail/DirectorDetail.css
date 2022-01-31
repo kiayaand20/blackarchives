@@ -165,7 +165,7 @@
     flex-direction: column;
   }
   .director-img {
-    padding-left: 240px;
+    padding-left: 220px;
   }
   .detail {
     display: flex;
@@ -206,7 +206,7 @@
   .director-img {
     width: 450px;
     height: 350px;
-    padding: 0px 115px;
+    padding: 0px 105px;
   }
   .detail {
     display: flex;
@@ -262,7 +262,7 @@
   .director-img {
     width: 250px;
     height: 200px;
-    padding: 0px;
+    padding-left: 20px;
   }
   .detail {
     display: flex;
@@ -290,6 +290,7 @@
   }
   .film-section-title {
     font-size: 30px;
+    font-weight: bold;
     width: 25%;
   }
   .film-card {
@@ -318,5 +319,8 @@
     width: 60px;
     height: 25px;
     padding-top: 0px;
+  }
+  .director-container {
+    padding: 0px;
   }
 }

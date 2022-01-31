@@ -23,7 +23,7 @@ const DirectorInfo = () => {
   return (
     <div>
       <div>
-      <h1 className='all-director-title'>Director List</h1>
+      <p className='all-director-title'>Director List</p>
         <p className='all-director-sentence'> Want to add a Director?
           <Link to="/directors/create" style={{ textDecoration: "underline" }}> Click Here!</Link></p>
         {directors.map(director => (

@@ -43,9 +43,9 @@ function SignIn({setUser}) {
   return (
     <Layout>
     <div className='form-container'>
-      <h3>Sign In</h3>
-      <form onSubmit={handleSignIn}>
-        <label>Username</label>
+      <h1>Login to your Account</h1>
+      <form className="sign-in-form" onSubmit={handleSignIn}>
+        <label className='sign-in-label'>Username</label>
         <input
           required
           type='text'
@@ -54,7 +54,7 @@ function SignIn({setUser}) {
           placeholder='Enter Username'
           onChange={handleChange}
         />
-        <label>Password</label>
+        <label className='sign-in-label'>Password</label>
         <input
           required
           name='password'
@@ -63,7 +63,7 @@ function SignIn({setUser}) {
           placeholder='Password'
           onChange={handleChange}
           />
-        <button type='submit'>Submit</button>
+        <button className='sign-in-btn' type='submit'>Login</button>
       </form>
     </div>
   </Layout>
