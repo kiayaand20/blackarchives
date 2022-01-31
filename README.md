@@ -2,7 +2,7 @@
 
 ## Project Name
 
-[<h2><strong>blackArchives</strong></h2>](https://blackarchives.netlify.app/)
+[<h2><b>blackArchives</b></h2>](https://blackarchives.netlify.app/)
 
 ## Project Description
 
@@ -57,7 +57,7 @@ Client (Front-end):
 
 Back-end:
 
-Directors -
+<b>Directors -</b>
 
 ```
  {
@@ -77,7 +77,7 @@ Directors -
             },
 ```
 
-Films -
+<b>Films -</b>
 
 ```
 {
