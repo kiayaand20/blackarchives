@@ -17,7 +17,7 @@ const DirectorInfo = () => {
   }, [])
 
   if (!isLoaded) {
-    return <h1>Loading...</h1>
+    return <p className='loading'>Loading...</p>
   }
 
   return (

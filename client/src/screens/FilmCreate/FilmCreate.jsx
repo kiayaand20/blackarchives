@@ -1,9 +1,9 @@
-import { useState, useEffect} from 'react'
+import './FilmCreate.css'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { createFilms } from '../../services/films'
 import { getDirectors } from '../../services/directors'
 import Layout from '../../components/Layout/Layout'
-import './FilmCreate.css'
 
 
 function FilmCreate(props) {

@@ -22,7 +22,7 @@ body {
 .form-container {
   align-self: center;
   padding: 1em;
-  width: 50%;
+  width: 60%;
   height: 80%;
   margin: 4em auto;
 }
@@ -30,7 +30,7 @@ body {
 h1 {
   border-bottom: 2px solid #ffa818;
   width: 55%;
-  margin-left: 160px;
+  margin-left: 193px;
   padding-top: 100px;
 }
 
@@ -132,12 +132,13 @@ input {
 @media (max-width: 450px) {
   h1 {
     border-bottom: 2px solid #ffa818;
-    width: 120%;
+    width: 100%;
     margin-left: 0px;
-    padding-top: 90px;
+    padding-top: 40px;
     font-size: 20px;
   }
   .sign-in-form {
     padding-left: 0px;
+    padding-right: 30px;
   }
 }

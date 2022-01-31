@@ -1,8 +1,8 @@
-import { useState} from 'react'
+import './DirectorCreate.css'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { createDirector } from '../../services/directors'
 import Layout from '../../components/Layout/Layout'
-import './DirectorCreate.css'
 
 
 function DirectorCreate(props) {

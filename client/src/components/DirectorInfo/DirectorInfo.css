@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Sacramento&display=swap");
 
+.loading {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px !important;
+  margin: 0px;
+  font-size: 48px;
+}
+
 .director-card {
   border-style: 2px solid;
   font-family: "Gilda Display", serif;
