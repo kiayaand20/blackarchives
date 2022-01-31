@@ -57,7 +57,7 @@ The application has the following endpoints:
 
 <b>Back-end:</b>
 
-Directors -
+<em>Directors -</em>
 
 ```
  {
@@ -77,7 +77,7 @@ Directors -
             },
 ```
 
-Films -
+<em>Films -</em>
 
 ```
 {
