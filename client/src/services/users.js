@@ -1,15 +1,15 @@
 import api from "./apiConfig";
 
-// export const signUp = async (credentials) => {
-//   try {
-//     const resp = await api.post('/user/signup/', credentials)
-//     localStorage.setItem('token', resp.data.token)
-//     const user = jwtDecode(resp.data.token)
-//     return user
-//   } catch (error) {
-//     throw error
-//   }
-// }
+export const signUp = async (credentials) => {
+  try {
+    const res = await api.post('/user/signup/', credentials)
+    localStorage.setItem("token", res.data.access);
+    localStorage.setItem("refresh", res.data.refresh);
+    return res
+  } catch (error) {
+    throw error
+  }
+}
 
 export const signIn = async (credentials) => {
   try {
