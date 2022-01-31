@@ -55,7 +55,7 @@ The application has the following endpoints:
 - Film Create = '/films/create'
 - Film Edit (by ID number) = '/films/:id/edit'
 
-<b>Back-end:</b>
+<b>Back-end Code Snippets:</b>
 
 <em>Directors -</em>
 
