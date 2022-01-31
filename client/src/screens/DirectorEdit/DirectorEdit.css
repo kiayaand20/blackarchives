@@ -58,3 +58,12 @@
   padding-right: 30px;
   padding-top: 15px;
 }
+
+@media (max-width: 900px) {
+  .input {
+    width: 300px;
+  }
+  .input-section {
+    width: 50%;
+  }
+}
