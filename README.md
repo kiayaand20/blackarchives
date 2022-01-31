@@ -10,9 +10,9 @@
 
 ## Wireframes
 
-![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643076673/Project%204/Screen_Shot_2022-01-24_at_9.10.59_PM_qurfnu.png)
+![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643648098/Screen_Shot_2022-01-31_at_11.54.20_AM_adrlrj.png)
 
-![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643065826/Project%204/Screen_Shot_2022-01-24_at_6.08.46_PM_xfri9c.png)
+![wireframes](https://res.cloudinary.com/kacloud20/image/upload/v1643648096/Screen_Shot_2022-01-31_at_11.51.36_AM_dy4fso.png)
 
 Wireframes URL: https://www.figma.com/file/h62ivP8PWsBibRcYC8cSQb/blackArchives?node-id=0%3A1
 
