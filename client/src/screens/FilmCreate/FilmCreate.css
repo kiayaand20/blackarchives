@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Gilda+Display&family=Sacramento&display=swap");
 
-.film-edit {
+.film-create {
   margin-top: 20px;
 }
 
-.film-edit-title {
+.film-create-title {
   display: flex;
   justify-content: center;
   font-family: "Gilda Display", serif;
@@ -13,7 +13,7 @@
   width: 25%;
 }
 
-.edit-form {
+.film-edit-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +48,7 @@
   font-size: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 390px;
+  margin-left: 405px;
 }
 
 .label {
@@ -71,4 +71,24 @@ select {
   padding-left: 5px;
   font-weight: bold;
   border-width: 2px;
+}
+
+@media (max-width: 800px) {
+  .film-edit-form {
+    padding-right: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  .film-create {
+    margin-top: 60px;
+    padding-bottom: 20px;
+  }
+  .film-edit-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Gilda Display", serif;
+    padding-left: 90px;
+  }
 }

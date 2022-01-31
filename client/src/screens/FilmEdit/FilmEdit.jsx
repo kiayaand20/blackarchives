@@ -55,7 +55,7 @@ function FilmEdit(props) {
       <div className='film-edit'>
         <h1 className='film-edit-title'>Edit Film</h1>
       </div>
-      <div className='edit-form'>
+      <div className='film-edit-form'>
         <form onSubmit={handleSubmit}>
           <div className='input-section'>
             <label className='label'>Title:</label>

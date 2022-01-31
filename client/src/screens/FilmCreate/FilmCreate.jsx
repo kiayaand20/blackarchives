@@ -44,10 +44,10 @@ function FilmCreate(props) {
 
   return (
     <Layout user={props.user}>
-      <div className='film-edit'>
-        <h1 className='film-edit-title'>Add Film</h1>
+      <div className='film-create'>
+        <h1 className='film-create-title'>Add Film</h1>
       </div>
-      <div className='edit-form'>
+      <div className='film-edit-form'>
         <form onSubmit={handleSubmit}>
           <div className='input-section'>
             <label className='label'>Title:</label>
